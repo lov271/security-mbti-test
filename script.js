@@ -1,4 +1,4 @@
-const SCRIPT_URL = '당신링크 추가';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzY7oR2i4QMZ_dEiNN78YCSuVH3Bm2ziJXvUCURJnxK6MNAbnpfnLyWvGPthz2XaUFn/exec';
 
 const startPage = document.getElementById('start-page');
 const qnaPage = document.getElementById('qna-page');
