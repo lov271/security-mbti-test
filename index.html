@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMANSA 보안 성향 테스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section id="start-page" class="main-card">
+            <img src="./logo.png" alt="SOMANSA 로고" class="logo-img">
+            <h1>나의 보안 유형은?<br>Securit-i</h1>
+            <img src="./dice.png" alt="보안 메인 이미지" class="main-img">
+            <p>간단한 테스트를 통해<br>나의 보안 유형을 알아보세요!</p>
+            <button class="start-btn" onclick="startTest()">테스트 시작하기</button>
+        </section>
+
+        <section id="qna-page" class="main-card hide">
+            <div class="qna-content-wrapper">
+                <div class="status-bar">
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <span id="q-counter"></span>
+                </div>
+                <h2 id="question-title"></h2>
+                <div class="answer-box">
+                    <button class="answer-btn" onclick="selectAnswer(0)"></button>
+                    <button class="answer-btn" onclick="selectAnswer(1)"></button>
+                </div>
+            </div>
+            <div class="qna-footer">
+                <button id="back-btn" onclick="goBack()">‹ 이전</button>
+            </div>
+        </section>
+
+        <section id="result-page" class="main-card hide">
+            <h3 id="result-summary"></h3>
+            <h1 id="result-type"></h1>
+            <div id="result-emoji" class="result-emoji"></div>
+            <div id="result-tags" class="tags-box"></div>
+            <div class="desc-box">
+                <p id="result-desc"></p>
+            </div>
+            <div class="match-box">
+                <div class="match-item good">
+                    <div id="best-match-emoji" class="match-emoji"></div>
+                    <div class="match-text">
+                        <h4>환상의 케미</h4>
+                        <span id="best-match"></span>
+                    </div>
+                </div>
+                <div class="match-item bad">
+                    <div id="worst-match-emoji" class="match-emoji"></div>
+                    <div class="match-text">
+                        <h4>환장의 케미</h4>
+                        <span id="worst-match"></span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="shareResult()" class="share-btn">내 검사결과 공유하기</button>
+            <button onclick="restartTest()" class="restart-btn">테스트 다시하기</button>
+        </section>
+    </div>
+    <footer class="footer">
+        Powered by SOMANSA
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
