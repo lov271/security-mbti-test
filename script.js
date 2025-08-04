@@ -130,3 +130,15 @@ function restartTest() {
 }
 
 function shareResult() {
+    const url = window.location.href;
+    
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+            alert("링크가 복사되었습니다! 결과를 공유해보세요.");
+        }).catch(err => {
+            alert("링크 복사에 실패했습니다. 직접 복사해주세요.");
+        });
+    } else {
+        alert("결과 공유 기능은 준비 중입니다. 현재 페이지의 주소를 복사하여 공유할 수 있습니다.");
+    }
+}
