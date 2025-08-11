@@ -1,4 +1,4 @@
-const SCRIPT_URL = '당신링크 추가';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwxIsRSPNUfnq6R0P_cNmaGBs_gFbkHKbniQpLJ_zvqvmj8OKzAGf5S2PjVQAK1EJt_/exec';
 
 const startPage = document.getElementById('start-page');
 const qnaPage = document.getElementById('qna-page');
@@ -138,4 +138,5 @@ function shareResult() {
         alert("결과 공유 기능은 준비 중입니다. 현재 페이지의 주소를 복사하여 공유할 수 있습니다.");
     }
 }
+
 
