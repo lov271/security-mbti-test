@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- 시작/질문 페이지만을 위한 래퍼 -->
+    <div id="card-wrapper" class="page-wrapper">
         <section id="start-page" class="main-card">
             <img src="./logo.png" alt="SOMANSA 로고" class="logo-img">
-            <h1>나의 보안 유형은?<br>Securit-i</h1>
+            <h1>나의 보안 유형은?<br><span>Securit-i</span></h1>
             <img src="./dice.png" alt="보안 메인 이미지" class="main-img">
             <p>간단한 테스트를 통해<br>나의 보안 유형을 알아보세요!</p>
             <button class="start-btn" onclick="startTest()">테스트 시작하기</button>
@@ -34,38 +35,18 @@
                 <button id="back-btn" onclick="goBack()">‹ 이전</button>
             </div>
         </section>
-
-        <section id="result-page" class="main-card hide">
-            <h3 id="result-summary"></h3>
-            <h1 id="result-type"></h1>
-            <div id="result-emoji" class="result-emoji"></div>
-            <div id="result-tags" class="tags-box"></div>
-            <div class="desc-box">
-                <p id="result-desc"></p>
-            </div>
-            <div class="match-box">
-                <div class="match-item good">
-                    <div id="best-match-emoji" class="match-emoji"></div>
-                    <div class="match-text">
-                        <h4>환상의 케미</h4>
-                        <span id="best-match"></span>
-                    </div>
-                </div>
-                <div class="match-item bad">
-                    <div id="worst-match-emoji" class="match-emoji"></div>
-                    <div class="match-text">
-                        <h4>환장의 케미</h4>
-                        <span id="worst-match"></span>
-                    </div>
-                </div>
-            </div>
-            <button onclick="shareResult()" class="share-btn">내 검사결과 공유하기</button>
-            <button onclick="restartTest()" class="restart-btn">테스트 다시하기</button>
-        </section>
     </div>
-    <footer class="footer">
-        Powered by SOMANSA
-    </footer>
+
+    <!-- 결과 페이지는 별도의 컨테이너로 분리 -->
+    <div id="result-container" class="container hide">
+        <section id="result-page">
+            <!-- 결과 내용은 script.js에서 동적으로 생성됩니다 -->
+        </section>
+        <footer class="footer">
+            Powered by SOMANSA
+        </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
